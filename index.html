@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vue-email-list</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 </head>
 <body>
     <ul id="app">
-        <li v-for = "mail in arrayMail">
-            {{ mail }} 
-        </li>
+        <template v-for = "mail in arrayMail">
+            <li :class = "arrayMail.length === 10 ? 'active' : 'none' ">
+                {{ mail }} 
+            </li>
+        </template>
     </ul>
     
     <script src="js/app.js"></script>

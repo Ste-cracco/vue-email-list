@@ -3,12 +3,14 @@
 const app = new Vue ( {
     el:'#app',
     data: {
-        arrayMail: [],
-        currentIndex: 0
+        arrayMail: []
     },
-    mounted() {
+    methods: {
+        
+    },
 
-        for(i=0; i<=10; i++) {            
+    mounted() {
+        for(i = 0; i < 10; i++) {            
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((res) => {
                 // console.log(res)
